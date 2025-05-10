@@ -734,6 +734,7 @@ func (l *RemoteProvider) SaveK8sContext(token string, k8sContext K8sContext) (co
 		SubType: "orchestrator",
 		// Eventually the status would depend on other factors like, whether user administratively processed it or not
 		// Is clsuter reachable and other reasons.
+		Name:    k8sContext.Name, 
 		Status:           connections.DISCOVERED,
 		MetaData:         metadata,
 		CredentialSecret: cred,
