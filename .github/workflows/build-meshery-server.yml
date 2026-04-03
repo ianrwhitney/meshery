@@ -29,10 +29,13 @@ jobs:
           go build -tags draft ./server/cmd/main.go ./server/cmd/error.go
 
       - name: Create artifact directory and copy binaries and config 
-        run: |
+        run: |      
           mkdir -p dist
           cp main dist/
-          cp ./server/cmd/server-config.env dist/
+          cp ./server/server-config.env dist/
+          cp -r meshmodel dist/
+          mkdir -p dist/docs
+          cp -r docs/docs dist/docs/
 
       - name: Upload backend artifact
         id: upload
