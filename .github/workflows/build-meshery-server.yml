@@ -32,13 +32,13 @@ jobs:
         run: |      
           mkdir -p dist/workspace/run
           mkdir -p dist/workspace/meshmodel
-          mkdir -p dist/workspace/docs
+          mkdir -p dist/workspace/docs/data
       
           cp main dist/workspace/run/
           cp ./server/cmd/server-config.env dist/workspace/run/
       
           cp -r ./server/meshmodel/* dist/workspace/meshmodel/
-          cp -r ./docs/catalog dist/workspace/docs/
+          cp -r ./docs/data/catalog dist/workspace/docs/data/catalog
 
       - name: Upload backend artifact
         id: upload
