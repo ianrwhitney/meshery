@@ -33,8 +33,8 @@ jobs:
           mkdir -p dist
           cp main dist/
           cp ./server/cmd/server-config.env dist/
-          cp -r ./server/meshmodel dist/meshmodel/
-          cp -r ./docs/catalog dist/catalog/
+          cp -r ./server/meshmodel dist/server/meshmodel/
+          cp -r ./docs/catalog dist/docs/catalog/
 
       - name: Upload backend artifact
         id: upload
