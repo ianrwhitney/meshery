@@ -5,12 +5,12 @@ inputs:
   backend-artifact:
     description: "Backend artifact name"
     required: true
-  ui-artifact:
-    description: "UI artifact name"
-    required: true
-  provider-ui-artifact:
-    description: "Provider UI artifact name"
-    required: true
+  # ui-artifact:
+  #   description: "UI artifact name"
+  #   required: true
+  # provider-ui-artifact:
+  #   description: "Provider UI artifact name"
+  #   required: true
 
 runs:
   using: "composite"
@@ -21,14 +21,14 @@ runs:
         name: ${{ inputs.backend-artifact }}
         path: .
 
-    - name: Download UI Artifact
-      uses: actions/download-artifact@v6
-      with:
-        name: ${{ inputs.ui-artifact }}
-        path: ./ui/out
+    # - name: Download UI Artifact
+    #   uses: actions/download-artifact@v6
+    #   with:
+    #     name: ${{ inputs.ui-artifact }}
+    #     path: ./ui/out
 
-    - name: Download Provider UI Artifact
-      uses: actions/download-artifact@v6
-      with:
-        name: ${{ inputs.provider-ui-artifact }}
-        path: ./provider-ui/out
+    # - name: Download Provider UI Artifact
+    #   uses: actions/download-artifact@v6
+    #   with:
+    #     name: ${{ inputs.provider-ui-artifact }}
+    #     path: ./provider-ui/out
