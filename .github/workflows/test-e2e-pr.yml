@@ -67,11 +67,11 @@ jobs:
   
       - name: Run Meshery UI and Server
         run: |
-          cd dist/run
+          cd ./run
           chmod +x ./main
           ./main &
           sleep 90
-          
+
       - name: Install Playwright
         run: make ui-setup-ci
 
