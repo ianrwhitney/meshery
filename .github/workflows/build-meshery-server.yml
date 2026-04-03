@@ -32,7 +32,7 @@ jobs:
         run: |      
           mkdir -p dist
           cp main dist/
-          cp ./server/server-config.env dist/
+          cp ./server/cmd/server-config.env dist/
           cp -r meshmodel dist/
           mkdir -p dist/docs
           cp -r docs/docs dist/docs/
