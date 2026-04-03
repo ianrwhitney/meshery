@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t meshery-server:ci .
+          docker build -f install/docker/Dockerfile -t meshery-server:ci .
   
       - name: Export Docker image
         run: |
