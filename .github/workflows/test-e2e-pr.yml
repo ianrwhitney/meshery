@@ -67,6 +67,7 @@ jobs:
   
       - name: Run Meshery UI and Server
         run: |
+          cd dist/run
           chmod +x ./main
           ./main &
           sleep 90

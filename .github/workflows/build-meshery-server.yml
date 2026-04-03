@@ -30,15 +30,15 @@ jobs:
 
       - name: Create artifact directory and copy binaries and config 
         run: |      
-          mkdir -p dist
-          mkdir -p dist/docs
+          mkdir -p dist/run
           mkdir -p dist/meshmodel
+          mkdir -p dist/docs
 
-          cp main dist/
-          cp ./server/cmd/server-config.env dist/
+          cp main dist/run/
+          cp ./server/cmd/server-config.env dist/run/
           cp -r ./server/meshmodel/* dist/meshmodel/
           cp -r ./docs/catalog dist/docs/
-          
+
       - name: Upload backend artifact
         id: upload
         uses: actions/upload-artifact@v6
