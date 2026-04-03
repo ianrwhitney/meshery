@@ -28,9 +28,15 @@ jobs:
           GOPROXY=https://proxy.golang.org,direct GOSUMDB=off GO111MODULE=on \
           go build -tags draft ./server/cmd/main.go ./server/cmd/error.go
 
+      - name: Create artifact directory and copy binaries and config 
+        run: |
+          mkdir -p dist
+          cp main dist/
+          cp ./server/server-config.env dist/
+
       - name: Upload backend artifact
         id: upload
         uses: actions/upload-artifact@v6
         with:
           name: meshery-backend
-          path: ./main
+          path: dist
