@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p dist
           cp main dist/
-          cp ./server/server-config.env dist/
+          cp ./server/cmd/server-config.env dist/
 
       - name: Upload backend artifact
         id: upload
